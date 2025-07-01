@@ -1,0 +1,340 @@
+   -- This GUI made by ! Ghost#90
+
+-- Instances:
+ 
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextButton = Instance.new("TextLabel")
+local idk = Instance.new("TextButton")
+local idk1 = Instance.new("TextButton")
+local idk2 = Instance.new("TextButton")
+local idk3 = Instance.new("TextButton")
+local idk4 = Instance.new("TextButton")
+local idk5 = Instance.new("TextButton")
+local idk6 = Instance.new("TextButton")
+local idk7 = Instance.new("TextButton")
+local idk8 = Instance.new("TextButton")
+local idk9 = Instance.new("TextButton")
+local idk12 = Instance.new("TextButton")
+local idk13 = Instance.new("TextButton")
+local idk14 = Instance.new("TextButton")
+local close = Instance.new("TextButton")
+ 
+--Properties:
+ 
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ResetOnSpawn = false
+ 
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Frame.Position = UDim2.new(0.369825214, 0, 0.423832893, 0)
+Frame.Size = UDim2.new(0, 350, 0, 250)
+Frame.Active = true
+Frame.Draggable = true
+ 
+ 
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(0, 255, 255)
+TextButton.Position = UDim2.new(0.01, 0, 0.00832893, 0)
+TextButton.Size = UDim2.new(0, 303, 0, 35)
+TextButton.Font = Enum.Font.Cartoon
+TextButton.Text = "c00lkidd gui"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 40.000
+ 
+idk.Parent = Frame
+idk.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
+idk.Position = UDim2.new(0.01, 0, 0.2, 0)
+idk.Size = UDim2.new(0, 94, 0, 35)
+idk.Font = Enum.Font.Cartoon
+idk.Text = "skybox"
+idk.TextColor3 = Color3.fromRGB(0, 0, 0)
+idk.TextSize = 20.000
+idk.MouseButton1Down:connect(function()
+
+sky = Instance.new("Sky",game:GetService("Lighting"))
+sky.SkyboxBk = "http://www.roblox.com/asset/?id=140285861217913"
+sky.SkyboxFt = "http://www.roblox.com/asset/?id=140285861217913"
+sky.SkyboxLf = "http://www.roblox.com/asset/?id=140285861217913"
+sky.SkyboxRt = "http://www.roblox.com/asset/?id=140285861217913"
+sky.SkyboxUp = "http://www.roblox.com/asset/?id=140285861217913"
+sky.SkyboxDn = "http://www.roblox.com/asset/?id=140285861217913"
+end)
+ 
+idk1.Parent = Frame
+idk1.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
+idk1.Position = UDim2.new(0.01, 0, 0.4, 0)
+idk1.Size = UDim2.new(0, 94, 0, 35)
+idk1.Font = Enum.Font.Cartoon
+idk1.Text = "Decal"
+idk1.TextColor3 = Color3.fromRGB(0, 0, 0)
+idk1.TextSize = 20.000
+idk1.MouseButton1Down:connect(function()
+decalID = 16761646077
+function exPro(root)
+for _, v in pairs(root:GetChildren()) do
+if v:IsA("Decal") and v.Texture ~= "http://www.roblox.com/asset/?id="..decalID then
+v.Parent = nil
+elseif v:IsA("BasePart") then
+v.Material = "Plastic"
+v.Transparency = 0
+local One = Instance.new("Decal", v)
+local Two = Instance.new("Decal", v)
+local Three = Instance.new("Decal", v)
+local Four = Instance.new("Decal", v)
+local Five = Instance.new("Decal", v)
+local Six = Instance.new("Decal", v)
+One.Texture = "http://www.roblox.com/asset/?id="..decalID
+Two.Texture = "http://www.roblox.com/asset/?id="..decalID
+Three.Texture = "http://www.roblox.com/asset/?id="..decalID
+Four.Texture = "http://www.roblox.com/asset/?id="..decalID
+Five.Texture = "http://www.roblox.com/asset/?id="..decalID
+Six.Texture = "http://www.roblox.com/asset/?id="..decalID
+One.Face = "Front"
+Two.Face = "Back"
+Three.Face = "Right"
+Four.Face = "Left"
+Five.Face = "Top"
+Six.Face = "Bottom"
+end
+exPro(v)
+end
+end
+function asdf(root)
+for _, v in pairs(root:GetChildren()) do
+asdf(v)
+end
+end
+exPro(game.Workspace)
+asdf(game.Workspace)
+end)
+ 
+idk2.Parent = Frame
+idk2.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
+idk2.Position = UDim2.new(0.34, 0, 0.4, 0)
+idk2.Size = UDim2.new(0, 94, 0, 35)
+idk2.Font = Enum.Font.Cartoon
+idk2.Text = "logo particle"
+idk2.TextColor3 = Color3.fromRGB(0, 0, 0)
+idk2.TextSize = 20.00
+idk2.MouseButton1Down:connect(function()
+for i, v in pairs(game.Players:GetChildren()) do emit = Instance.new("ParticleEmitter") emit.Parent = v.Character.Head emit.Texture = "http://www.roblox.com/asset/?id=140285861217913" emit.VelocitySpread = 100 end
+end)
+ 
+idk3.Parent = Frame
+idk3.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
+idk3.Position = UDim2.new(0.34, 0, 0.2, 0)
+idk3.Size = UDim2.new(0, 94, 0, 35)
+idk3.Font = Enum.Font.Cartoon
+idk3.Text = "hint a"
+idk3.TextColor3 = Color3.fromRGB(0, 0, 0)
+idk3.TextSize = 20.000
+idk3.MouseButton1Down:connect(function()
+
+		local function write(text,object)
+			if object:IsA("Hint") == true then
+				local count = object:FindFirstChild("Count")
+				if count == nil then
+					count = Instance.new("NumberValue")
+					count.Parent = object
+					count.Name = "Count"
+					count.Value = count.Value + 1
+				else
+					count.Value = count.Value + 1
+				end
+				local startcount = count.Value
+				for i = 1,#text do
+					if count.Value == startcount then
+						local letter = string.sub(text,i,i)
+						object.Text = string.sub(text,1,i)
+						wait(0.001)
+					else
+						break
+					end
+				end
+			end
+		end
+		local bro = Instance.new("Hint",workspace)
+		write("Team c00lkidd Join Today",bro)
+end)
+ 
+idk4.Parent = F
+idk4.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
+idk4.Position = UDim2.new(0.69, 0, 0.2, 0)
+idk4.Size = UDim2.new(0, 94, 0, 35)
+idk4.Font = Enum.Font.Cartoon
+idk4.Text = "jumpscare 2"
+idk4.TextColor3 = Color3.fromRGB(0, 0, 0)
+idk4.TextSize = 20.000
+idk4.MouseButton1Down:connect(function()
+b = Instance.new("Sky")  b.Parent = game.Lighting  b.SkyboxBk = "http://www.roblox.com/asset/?id=0"  b.SkyboxDn = "http://www.roblox.com/asset/?id=0" b.SkyboxFt = "http://www.roblox.com/asset/?id=0" b.SkyboxLf = "http://www.roblox.com/asset/?id=0" b.SkyboxRt = "http://www.roblox.com/asset/?id=0" b.SkyboxUp = "http://www.roblox.com/asset/?id=0"     for i,v in pairs(game.Players:GetPlayers()) do         if v.Name ~= me and not v.PlayerGui:FindFirstChild("Screamer") and v:FindFirstChild("PlayerGui") then             spawn(function()                 local newgui = Instance.new("ScreenGui",v.PlayerGui)                 newgui.Name = "Screamer"                 local newimage = Instance.new("ImageLabel",newgui)                 newimage.Image = "http://www.roblox.com/Asset/?id=16891921648"                 newimage.Size = UDim2.new(1,1,1,1)                 local s = Instance.new("Sound",newgui)                 s.SoundId = "rbxassetid://6018028320"                 s.Volume = 9e9                 s.Looped = true                 s:Play()                 print("Screamed "..v.Name)                 while wait(9) do                      newimage.Parent:Destroy() wait(11) Spooky = Instance.new("Sound", game.Workspace)         Spooky.Name = "Spooky"         Spooky.SoundId = "rbxassetid://0"         Spooky.Volume = 20                 Spooky.Pitch = 0.8         Spooky:Play()                  end             end)         end     end
+end)
+ 
+idk5.Parent = Frame
+idk5.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
+idk5.Position = UDim2.new(0.69, 0, 0.4, 0)
+idk5.Size = UDim2.new(0, 94, 0, 35)
+idk5.Font = Enum.Font.Cartoon
+idk5.Text = "jumpscare 2"
+idk5.TextColor3 = Color3.fromRGB(0, 0, 0)
+idk5.TextSize = 20.000
+idk5.MouseButton1Down:connect(function()
+b = Instance.new("Sky")  b.Parent = game.Lighting  b.SkyboxBk = "http://www.roblox.com/asset/?id=0"  b.SkyboxDn = "http://www.roblox.com/asset/?id=0" b.SkyboxFt = "http://www.roblox.com/asset/?id=0" b.SkyboxLf = "http://www.roblox.com/asset/?id=0" b.SkyboxRt = "http://www.roblox.com/asset/?id=0" b.SkyboxUp = "http://www.roblox.com/asset/?id=0"     for i,v in pairs(game.Players:GetPlayers()) do         if v.Name ~= me and not v.PlayerGui:FindFirstChild("Screamer") and v:FindFirstChild("PlayerGui") then             spawn(function()                 local newgui = Instance.new("ScreenGui",v.PlayerGui)                 newgui.Name = "Screamer"                 local newimage = Instance.new("ImageLabel",newgui)                 newimage.Image = "http://www.roblox.com/Asset/?id=16891921648"                 newimage.Size = UDim2.new(1,1,1,1)                 local s = Instance.new("Sound",newgui)                 s.SoundId = "rbxassetid://6018028320"                 s.Volume = 9e9                 s.Looped = true                 s:Play()                 print("Screamed "..v.Name)                 while wait(9) do                      newimage.Parent:Destroy() wait(11) Spooky = Instance.new("Sound", game.Workspace)         Spooky.Name = "Spooky"         Spooky.SoundId = "rbxassetid://0"         Spooky.Volume = 20                 Spooky.Pitch = 0.8         Spooky:Play()                  end             end)         end     end
+end)
+ 
+idk6.Parent = Frame
+idk6.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
+idk6.Position = UDim2.new(0.69, 0, 0.8, 0)
+idk6.Size = UDim2.new(0, 94, 0, 35)
+idk6.Font = Enum.Font.Cartoon
+idk6.Text = "s5n5 gui"
+idk6.TextColor3 = Color3.fromRGB(0, 0, 0)
+idk6.TextSize = 20.000
+idk6.MouseButton1Down:connect(function() 
+_G.HeadSize = 10
+_G.Disabled = true
+ 
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.Disabled then
+for i,v in next, game:GetService('Players'):GetPlayers() do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+pcall(function()
+v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
+v.Character.HumanoidRootPart.Transparency = 0.7
+v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really blue")
+v.Character.HumanoidRootPart.Material = "Neon"
+v.Character.HumanoidRootPart.CanCollide = false
+end)
+end
+end
+end
+end)
+end)
+ 
+idk7.Parent = Frame
+idk7.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
+idk7.Position = UDim2.new(0.01, 0, 0.6, 0)
+idk7.Size = UDim2.new(0, 94, 0, 35)
+idk7.Font = Enum.Font.Cartoon
+idk7.Text = "jumpscare"
+idk7.TextColor3 = Color3.fromRGB(0, 0, 0)
+idk7.TextSize = 20.000
+idk7.MouseButton1Down:connect(function()
+b = Instance.new("Sky") b.Parent = game.Lighting b.SkyboxBk = "http://www.roblox.com/asset/?id=0" b.SkyboxDn = "http://www.roblox.com/asset/?id=0" b.SkyboxFt = "http://www.roblox.com/asset/?id=0" b.SkyboxLf = "http://www.roblox.com/asset/?id=0" b.SkyboxRt = "http://www.roblox.com/asset/?id=0" b.SkyboxUp = "http://www.roblox.com/asset/?id=0" for i,v in pairs(game.Players:GetPlayers()) do if v.Name ~= me and not v.PlayerGui:FindFirstChild("Screamer") and v:FindFirstChild("PlayerGui") then spawn(function() local newgui = Instance.new("ScreenGui",v.PlayerGui) newgui.Name = "Screamer" local newimage = Instance.new("ImageLabel",newgui) newimage.Image = "http://www.roblox.com/Asset/?id=16797210046" newimage.Size = UDim2.new(1,1,1,1) local s = Instance.new("Sound",newgui) s.SoundId = "rbxassetid://6129291390" s.Volume = 999e999 s.Pitch = 0.2 s.Looped = true s:Play() print("Screamed "..v.Name) while wait(15) do newimage.Parent:Destroy() wait(11) Spooky = Instance.new("Sound", game.Workspace) Spooky.Name = "Spooky" Spooky.SoundId = "rbxassetid://0" Spooky.Volume = 20 Spooky.Pitch = 0.8 Spooky:Play() end end) end end
+end)
+ 
+idk8.Parent = Frame
+idk8.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
+idk8.Position = UDim2.new(0.34, 0, 0.6, 0)
+idk8.Size = UDim2.new(0, 94, 0, 35)
+idk8.Font = Enum.Font.Cartoon
+idk8.Text = "message"
+idk8.TextColor3 = Color3.fromRGB(0, 0, 0)
+idk8.TextSize = 20.000
+idk8.MouseButton1Down:connect(function()
+while wait(0.1) do
+       msg = Instance.new("Message",workspace)
+       msg.Text = " Team c00lkidd Was here"
+       wait(0)
+       msg:Destroy()
+   end
+end)
+ 
+ 
+idk12.Parent = Frame
+idk12.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
+idk12.Position = UDim2.new(0.69, 0, 0.6, 0)
+idk12.Size = UDim2.new(0, 94, 0, 35)
+idk12.Font = Enum.Font.Cartoon
+idk12.Text = "Face all"
+idk12.TextColor3 = Color3.fromRGB(0, 0, 0)
+idk12.TextSize = 20.000
+idk12.MouseButton1Down:connect(function()
+local FillColor = Color3.fromRGB(175,25,255)
+local DepthMode = "AlwaysOnTop"
+local FillTransparency = 0.5
+local OutlineColor = Color3.fromRGB(255,255,255)
+local OutlineTransparency = 0
+ for i,v in pairs(game.Players:GetChildren()) do
+			if v.Character:FindFirstChild("Head") then
+				gui1=Instance.new("BillboardGui")
+				gui1.Parent = v.Character.Head
+				gui1.Adornee = v.Character.Head
+				gui1.Size=UDim2.new(2.5,0,2.5,0)
+				gui1.StudsOffset=Vector3.new(0,0.2,0)
+				gui1.AlwaysOnTop = true
+				text1=Instance.new("ImageLabel")
+				text1.Image = "http://www.roblox.com/asset/?id=140285861217913"
+				text1.Size=UDim2.new(1,0,1,0)
+				text1.Position=UDim2.new(0,0,0,0)
+				text1.BackgroundTransparency = 1
+				text1.Parent=gui1
+				v.Character.Head.Transparency = 1
+			end
+		end
+end)
+ 
+idk13.Parent = Frame
+idk13.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
+idk13.Position = UDim2.new(0.34, 0, 0.8, 0)
+idk13.Size = UDim2.new(0, 94, 0, 35)
+idk13.Font = Enum.Font.Cartoon
+idk13.Text = "theme 2"
+idk13.TextColor3 = Color3.fromRGB(0, 0, 0)
+idk13.TextSize = 20.000
+idk13.MouseButton1Down:connect(function()
+local s = Instance.new("Sound")      s.Name = "Sound"     s.SoundId = "http://www.roblox.com/asset/?id=5409360995"     s.Volume = 999999999     s.Pitch = 1.4     s.Looped = true     s.archivable = false      s.Parent = game.Workspace      wait(1)      s:play()
+end)
+ 
+idk14.Parent = Frame
+idk14.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
+idk14.Position = UDim2.new(0.01, 0, 0.8, 0)
+idk14.Size = UDim2.new(0, 94, 0, 35)
+idk14.Font = Enum.Font.Cartoon
+idk14.Text = "theme"
+idk14.TextColor3 = Color3.fromRGB(0, 0, 0)
+idk14.TextSize = 20.000
+idk14.MouseButton1Down:connect(function()
+local s = Instance.new("Sound")      s.Name = "Sound"     s.SoundId = "http://www.roblox.com/asset/?id=1836255687"     s.Volume = 99999999999999     s.Pitch = 0.762    s.Looped = true     s.archivable = false      s.Parent = game.Workspace      wait(1)      s:play()
+end)
+ 
+idk9.Parent = Frame
+idk9.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
+idk9.Position = UDim2.new(0.69, 0, 0.2, 0)
+idk9.Size = UDim2.new(0, 94, 0, 35)
+idk9.Font = Enum.Font.Cartoon
+idk9.Text = "Disco"
+idk9.TextColor3 = Color3.fromRGB(0, 0, 0)
+idk9.TextSize = 20.000
+idk9.MouseButton1Down:connect(function()
+ local Lighting = game:GetService("Lighting")
+		local ColorCorrection = Instance.new("ColorCorrectionEffect", Lighting)
+	
+		function zigzag(X) 
+			return math.acos(math.cos(X*math.pi))/math.pi
+		end
+	
+		Counter = 0
+	
+		Lighting.TimeOfDay = "12:00"
+	
+		while wait(0.1) do 
+			ColorCorrection.TintColor = Color3.fromHSV(zigzag(Counter),1,1)
+			Lighting.Ambient = Color3.fromHSV(zigzag(Counter),1,1)
+			Counter += 0.01
+		end
+end)
+ 
+close.Parent = Frame
+close.BackgroundColor3 = Color3.fromRGB(125, 102, 255)
+close.Position = UDim2.new(0.879518092, 0, 0.00832893, 0)
+close.Size = UDim2.new(0, 40, 0, 35)
+close.Font = Enum.Font.GothamBlack
+close.Text = "X"
+close.TextColor3 = Color3.new(0, 0, 0)
+close.TextScaled = true
+close.TextSize = 14
+close.TextWrapped = true
+close.MouseButton1Down:connect(function()
+Frame.Visible = false
+end)
